@@ -1,16 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500;700;900&display=swap');
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 100%;
+  font-family: 'Roboto', sans-serif;
+  color: #222;
+  background-color: #ffdca8;
+  line-height: 1.3;
+  letter-spacing: 0.5px;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Bebas Neue', cursive;
+  line-height: 1.4;
+  letter-spacing: -0.5px;
 }
 
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+}
+
+.navbar__logo {
+  font-size: 24px;
+  position: relative;
+  background-color: #333;
+  color: #fefefe;
+  padding: 8px 16px;
+}
+
+.navbar__logo:hover {
+  cursor: pointer;
+}
+.navbar__links {
+  display: flex;
+  gap: 1rem;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.5rem;
+}
+.navbar__logo-subtitle {
+  display: block;
+  position: absolute;
+  font-size: 11px;
+  top: 50px;
+}
+
+.page__container {
+  min-height: calc(100vh - 90px);
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  background-color: #e348c0;
+  color: black;
+  padding: 0.875rem 1.5rem;
+  border: 4px solid black;
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px, rgb(51, 51, 51) 4px 2px 0px 1px;
+}
+.card {
+  background-color: #e2c541;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.hero__title {
+  font-size: 3.4rem;
+  margin-bottom: 1.75rem;
+}
+.hero__image-container {
+  width: 100%;
+  max-width: 480px;
+  align-self: center;
+}
+.hero__quick-info p {
+  width: 100%;
+  margin-top: 1.5rem;
+  line-height: 1.3;
+  letter-spacing: 1px;
+}
+.hero__quick-info .btn {
+  margin-top: 2rem;
+}
+.hero__cards {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.card {
+  width: 300px;
+  height: 300px;
+  background-color: white;
+  border: 4px solid black;
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px, rgb(51, 51, 51) 4px 2px 0px 1px;
+  border-radius: 2px;
+}
+
+.card__title {
+  text-align: center;
+  background-color: #67dc85;
+  border-bottom: 4px solid black;
+  margin-bottom: 1.5rem;
+}
+
+.hue {
+  background-color: #e2c541;
+}
+
+.stack__list {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #333;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.navbar__toggle-wrapper {
+  display: none;
+  cursor: pointer;
+}
+
+.navbar__mobile {
+  position: absolute;
+  background-color: #ffdca8;
+  top: 80px;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - 60px);
+  place-items: center;
+}
+
+.navbar__mobile-links {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 3rem;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.5rem;
+}
+
+footer {
+  text-align: left;
+  max-width: 960px;
+  margin: 0 auto;
+  padding-top: 1rem;
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+  font-size: 70%;
+}
+
+.footer__links {
+  display: flex;
+  gap: 4rem;
+}
+
+.footer a {
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 1rem;
+  transition-duration: 350ms;
+}
+
+.footer a:hover {
+  color: #444;
+}
+.footer__copyright {
+  font-size: 10px;
+  text-align: center;
+  padding-top: 3rem;
+}
+
+/* #E3B748 */
+
+.form__control {
+  position: relative;
+  margin: 1.5rem 0;
+}
+
+.input-text {
+  font-size: 16px;
+  width: 100%;
+  height: 50px;
+  color: #2e2f3e;
+  padding-left: 9px;
+}
+
+select {
+  font-size: 16px;
+  width: 100%;
+  height: 50px;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  padding-left: 9px;
+  background-color: transparent;
+  outline: none;
+  color: #2e2f3e;
+  border: 1px solid #888;
+}
+.service__label {
+  font-size: 11px;
+}
+.floating-text {
+  position: absolute;
+  pointer-events: none;
+  left: 10px;
+  top: 15px;
+  transition: 0.2s ease all;
+}
+textarea {
+  color: #2e2f3e;
+  font-family: inherit;
+  padding-top: 5px;
+  padding-left: 9px;
+  font-size: 16px;
+  width: 100%;
+  height: 100px;
+  outline: none;
+  resize: none;
+}
+
+input {
+  outline: none;
+}
+
+.form__control .floating-text {
+  top: -20px;
+  left: 0;
+  font-size: 11px;
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: 1fr;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+
+.contact__info {
+  flex-grow: 1;
+  letter-spacing: 2px;
+}
+
+.contact__info p {
+  margin-top: 2rem;
+}
+
+.contact__form {
+  background-color: rgba(255, 255, 255);
+  color: #2e2f3e;
+  padding: 1.5rem;
+  border-radius: 2px;
+  border: 4px solid black;
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px, rgb(51, 51, 51) 4px 2px 0px 1px;
+}
+.contact__form h3 {
+  color: #0f0e17;
+}
+.form__services {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+.form__services-group {
+  display: flex;
+  gap: 2rem;
+}
+
+.form__btn {
+  width: 100%;
+}
+.form__radio-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contact__img {
+  margin: 4rem auto;
+}
+@media screen and (min-width: 570px) {
+  .hero__cards {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 840px) {
+  .hero {
+    flex-direction: row;
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (min-width: 590px) {
+  .navbar__mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .navbar__links {
+    display: none;
+  }
+  .navbar__toggle-wrapper {
+    display: block;
+  }
+  .navbar__mobile {
+    display: grid;
+  }
+}
+@media screen and (min-width: 700px) {
+  .contact {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
 }
