@@ -195,6 +195,7 @@ nav {
   width: 100vw;
   height: calc(100vh - 60px);
   place-items: center;
+  z-index: 999;
 }
 
 .navbar__mobile-links {
