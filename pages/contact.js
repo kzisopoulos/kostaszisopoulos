@@ -37,7 +37,7 @@ const Contact = () => {
             action="/success"
             method="POST"
             data-netlify="true"
-            onSubmit={handleSubmit(onSubmit)}
+            // onSubmit={handleSubmit(onSubmit)}
           >
             <h1>Getting in touch!</h1>
             <input type="hidden" name="form-name" value="contact-form" />
