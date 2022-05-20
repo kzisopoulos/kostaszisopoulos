@@ -9,7 +9,6 @@ const Contact = () => {
     reset,
   } = useForm();
   const onSubmit = (data) => {
-    console.log(data);
     reset();
   };
   return (
@@ -35,7 +34,7 @@ const Contact = () => {
         <div className="contact__form">
           <form
             name="contact-form"
-            action="contact/?success=true"
+            action="/success"
             method="POST"
             data-netlify="true"
             onSubmit={handleSubmit(onSubmit)}
