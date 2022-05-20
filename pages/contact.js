@@ -25,8 +25,9 @@ const Contact = () => {
             <Image
               src="/contact.svg"
               alt="Illustration of messaging"
-              width={500}
-              height={500}
+              width={480}
+              height={400}
+              layout="intrinsic"
             />
           </div>
         </div>
