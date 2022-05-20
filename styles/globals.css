@@ -89,10 +89,12 @@ nav {
   padding: 3rem 2rem;
 }
 
+/* e348c0 */
+
 .btn {
   margin-top: 1rem;
   display: inline-block;
-  background-color: #e348c0;
+  background-color: #489de3;
   color: black;
   padding: 0.875rem 1.5rem;
   border: 4px solid black;
