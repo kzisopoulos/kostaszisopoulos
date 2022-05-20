@@ -335,6 +335,7 @@ input {
 
 .form__btn {
   width: 100%;
+  cursor: pointer;
 }
 .form__radio-group {
   display: flex;

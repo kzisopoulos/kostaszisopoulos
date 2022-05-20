@@ -43,6 +43,9 @@ export default function Home() {
               <h2>Node.js / express.js</h2>
             </li>
             <li>
+              <h2>React / Next.js</h2>
+            </li>
+            <li>
               <h2>SASS / BEM</h2>
             </li>
             <li>
