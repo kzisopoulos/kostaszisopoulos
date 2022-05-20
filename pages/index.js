@@ -1,5 +1,5 @@
 import Head from 'next/head';
-
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Home() {
@@ -26,7 +26,14 @@ export default function Home() {
           </Link>
         </div>
         <div className="hero__image-container">
-          <img src="/hero.svg" className="hero__image" />
+          <Image
+            src="/hero.svg"
+            className="hero__image"
+            alt="illustration of site builing"
+            width={600}
+            height={300}
+            layout="responsive"
+          />
         </div>
       </div>
 

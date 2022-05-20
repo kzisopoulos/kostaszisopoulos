@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { useForm } from 'react-hook-form';
 const Contact = () => {
   const {
@@ -21,7 +22,12 @@ const Contact = () => {
           <p>Start your project today and get a fair estimation</p>
 
           <div className="contact__img">
-            <img src="/contact.svg" alt="" />
+            <Image
+              src="/contact.svg"
+              alt="Illustration of messaging"
+              width={500}
+              height={500}
+            />
           </div>
         </div>
 

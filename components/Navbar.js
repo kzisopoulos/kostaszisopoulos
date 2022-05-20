@@ -64,6 +64,7 @@ const Navbar = () => {
         {open ? (
           <Image
             src="/x.svg"
+            alt="close button"
             width={30}
             height={30}
             className="navbar__toggle-btn"
@@ -72,6 +73,7 @@ const Navbar = () => {
         ) : (
           <Image
             src="/list.svg"
+            alt="menu button"
             width={30}
             height={30}
             className="navbar__toggle-btn"
@@ -84,11 +86,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-<Image
-  src="/x.svg"
-  width={30}
-  height={30}
-  className="navbar__toggle-btn"
-  onClick={() => setOpen(!open)}
-/>;

@@ -14,14 +14,19 @@ const Footer = () => {
           <div className="footer__links-social">
             <a
               target="_blank"
+              rel="noopener noreferrer"
               href="https://www.linkedin.com/in/konstantinos-zisopoulos-533678211"
             >
               Linked In
             </a>
-            <a target="_blank" href="https://github.com/kzisopoulos">
+            <a
+              target="_blank"
+              href="https://github.com/kzisopoulos"
+              rel="noopener noreferrer"
+            >
               Github
             </a>
-            <a href="/resume.pdf" target="_blank">
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
               Download CV
             </a>
           </div>
