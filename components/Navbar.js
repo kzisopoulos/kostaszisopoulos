@@ -41,7 +41,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <Link href="/">
-        <div className="navbar__logo">
+        <div className="navbar__logo" onClick={() => setOpen(!open)}>
           <h1>kostas zisopoulos.</h1>
           <span className="navbar__logo-subtitle">
             web developer & infrastructure engineer
