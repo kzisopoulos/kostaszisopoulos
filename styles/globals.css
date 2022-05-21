@@ -100,9 +100,6 @@ nav {
   border: 4px solid black;
   box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px, rgb(51, 51, 51) 4px 2px 0px 1px;
 }
-.card {
-  background-color: #e2c541;
-}
 
 .hero {
   display: flex;
@@ -137,7 +134,7 @@ nav {
 }
 .card {
   width: 300px;
-  height: 300px;
+  min-height: 300px;
   background-color: white;
   border: 4px solid black;
   box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px, rgb(51, 51, 51) 4px 2px 0px 1px;
@@ -350,6 +347,79 @@ input {
 .contact__img {
   margin: 4rem auto;
 }
+
+/* 
+***************************************************************************************************************************
+                    PROJECTS PAGE STYLES
+***************************************************************************************************************************
+*/
+
+.projects {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.projects .card {
+  width: 320px;
+  position: relative;
+  cursor: pointer;
+}
+.projects .card__title {
+  margin-bottom: 0;
+}
+.projects .card__description {
+  padding: 1rem;
+  letter-spacing: 1px;
+}
+.features {
+  padding: 0.75rem;
+}
+.features span {
+  background-color: #67dc85;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 20px;
+  display: inline-block;
+  padding: 0.1rem 0.3rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.projects .card::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 350ms;
+  opacity: 0;
+  z-index: 999;
+}
+.projects .card::before {
+  content: 'Show More';
+  font-family: 'Bebas Neue', cursive;
+  font-size: 18px;
+  position: absolute;
+  z-index: 2000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 3px solid #67dc85;
+  background-color: #67dc85;
+  padding: 0.5rem;
+  opacity: 0;
+}
+.projects .card:hover::after {
+  opacity: 1;
+}
+.projects .card:hover::before {
+  opacity: 1;
+}
+
 @media screen and (min-width: 570px) {
   .hero__cards {
     flex-direction: row;
