@@ -191,7 +191,7 @@ nav {
   background-color: #ffdca8;
   top: 80px;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: calc(100vh - 60px);
   place-items: center;
   z-index: 999;
@@ -232,11 +232,12 @@ footer {
   color: #444;
 }
 .footer__copyright {
+  width: 50%;
   font-size: 10px;
   text-align: center;
   padding-top: 3rem;
+  margin: 0 auto;
 }
-
 /* #E3B748 */
 
 .form__control {
