@@ -19,11 +19,13 @@ export default function Home() {
             What I strive for is constant learning and keeping up to date with
             the latest technologies and trends to stay relavant in the field.
           </p>
-          <Link href="/projects">
-            <a className="btn">
-              <h2>check out my work</h2>
-            </a>
-          </Link>
+          <div>
+            <Link href="/projects">
+              <a className="btn">
+                <h2>check out my work</h2>
+              </a>
+            </Link>
+          </div>
         </div>
         <div className="hero__image-container">
           <Image

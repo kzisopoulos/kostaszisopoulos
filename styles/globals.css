@@ -92,13 +92,16 @@ nav {
 /* e348c0 */
 
 .btn {
-  margin-top: 1rem;
-  display: inline-block;
+  display: block;
+  width: fit-content;
   background-color: #489de3;
   color: black;
   padding: 0.875rem 1.5rem;
   border: 4px solid black;
   box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px, rgb(51, 51, 51) 4px 2px 0px 1px;
+  margin: 0 auto;
+  margin-top: 1rem;
+  text-align: center;
 }
 
 .hero {
@@ -125,6 +128,7 @@ nav {
 .hero__quick-info .btn {
   margin-top: 2rem;
 }
+
 .hero__cards {
   margin-top: 4rem;
   display: flex;
@@ -153,9 +157,9 @@ nav {
 }
 
 .stack__list {
-  display: flex;
-  flex-direction: column;
-  padding-left: 1rem;
+  display: grid;
+  place-items: center;
+  gap: 0.5rem;
 }
 
 .hover-underline-animation {
@@ -218,6 +222,7 @@ footer {
 
 .footer__links {
   display: flex;
+  justify-content: center;
   gap: 4rem;
 }
 
@@ -427,6 +432,12 @@ input {
     justify-content: center;
     align-items: center;
     gap: 2rem;
+  }
+  .btn {
+    margin-left: 0;
+  }
+  .footer__links {
+    justify-content: flex-start;
   }
 }
 
