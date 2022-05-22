@@ -45,6 +45,32 @@ img {
   object-fit: cover;
 }
 
+.page__container {
+  min-height: calc(100vh - 90px);
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.btn {
+  display: block;
+  width: fit-content;
+  background-color: #489de3;
+  color: black;
+  padding: 0.875rem 1.5rem;
+  border: 4px solid black;
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px, rgb(51, 51, 51) 4px 2px 0px 1px;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+/* 
+***************************************************************************************************************************
+                    NAVBAR COMPONENT STYLES
+***************************************************************************************************************************
+*/
+
 nav {
   display: flex;
   align-items: center;
@@ -81,28 +107,76 @@ nav {
   top: 50px;
 }
 
-.page__container {
-  min-height: calc(100vh - 90px);
-  max-width: 960px;
+.navbar__toggle-wrapper {
+  display: none;
+  cursor: pointer;
+}
+
+.navbar__mobile {
+  position: absolute;
+  background-color: #ffdca8;
+  top: 80px;
+  left: 0;
   width: 100%;
-  margin: 0 auto;
-  padding: 3rem 2rem;
+  height: calc(100vh - 60px);
+  place-items: center;
+  z-index: 999;
 }
 
-/* e348c0 */
-
-.btn {
-  display: block;
-  width: fit-content;
-  background-color: #489de3;
-  color: black;
-  padding: 0.875rem 1.5rem;
-  border: 4px solid black;
-  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px, rgb(51, 51, 51) 4px 2px 0px 1px;
-  margin: 0 auto;
-  margin-top: 1rem;
-  text-align: center;
+.navbar__mobile-links {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 3rem;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.5rem;
 }
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #333;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+@media screen and (min-width: 590px) {
+  .navbar__mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .navbar__links {
+    display: none;
+  }
+  .navbar__toggle-wrapper {
+    display: block;
+  }
+  .navbar__mobile {
+    display: grid;
+  }
+}
+
+/* 
+***************************************************************************************************************************
+                    MAIN COMPONENT STYLES
+***************************************************************************************************************************
+*/
 
 .hero {
   display: flex;
@@ -161,55 +235,32 @@ nav {
   place-items: center;
   gap: 0.5rem;
 }
-
-.hover-underline-animation {
-  display: inline-block;
-  position: relative;
+@media screen and (min-width: 570px) {
+  .hero__cards {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .btn {
+    margin-left: 0;
+  }
+  .footer__links {
+    justify-content: flex-start;
+  }
 }
 
-.hover-underline-animation:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #333;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
+@media screen and (min-width: 840px) {
+  .hero {
+    flex-direction: row;
+    margin-top: 1rem;
+  }
 }
-
-.hover-underline-animation:hover:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
-.navbar__toggle-wrapper {
-  display: none;
-  cursor: pointer;
-}
-
-.navbar__mobile {
-  position: absolute;
-  background-color: #ffdca8;
-  top: 80px;
-  left: 0;
-  width: 100%;
-  height: calc(100vh - 60px);
-  place-items: center;
-  z-index: 999;
-}
-
-.navbar__mobile-links {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  gap: 3rem;
-  font-family: 'Bebas Neue', cursive;
-  font-size: 1.5rem;
-}
-
+/* 
+***************************************************************************************************************************
+                    FOOTER COMPONENT STYLES
+***************************************************************************************************************************
+*/
 footer {
   text-align: left;
   max-width: 960px;
@@ -243,7 +294,17 @@ footer {
   padding-top: 3rem;
   margin: 0 auto;
 }
-/* #E3B748 */
+@media screen and (min-width: 570px) {
+  .footer__links {
+    justify-content: flex-start;
+  }
+}
+
+/* 
+***************************************************************************************************************************
+                    CONTACT COMPONENT STYLES
+***************************************************************************************************************************
+*/
 
 .form__control {
   position: relative;
@@ -426,45 +487,6 @@ input {
   opacity: 1;
 }
 
-@media screen and (min-width: 570px) {
-  .hero__cards {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-  }
-  .btn {
-    margin-left: 0;
-  }
-  .footer__links {
-    justify-content: flex-start;
-  }
-}
-
-@media screen and (min-width: 840px) {
-  .hero {
-    flex-direction: row;
-    margin-top: 1rem;
-  }
-}
-
-@media screen and (min-width: 590px) {
-  .navbar__mobile {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 590px) {
-  .navbar__links {
-    display: none;
-  }
-  .navbar__toggle-wrapper {
-    display: block;
-  }
-  .navbar__mobile {
-    display: grid;
-  }
-}
 @media screen and (min-width: 700px) {
   .contact {
     grid-template-columns: 1fr 1fr;
