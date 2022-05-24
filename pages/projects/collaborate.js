@@ -11,7 +11,7 @@ const collaborate = () => {
           techniques and technologies.
         </p>
         <p>
-          It's a work in progress and it is based upon the idea of Shaun Pelling
+          Its a work in progress and it is based upon the idea of Shaun Pelling
           , my mentor , it started as a learning project and I plan on keep
           working on it and keep adding new exciting features.
         </p>
@@ -79,6 +79,7 @@ const collaborate = () => {
           href="https://collab-f3cc5.firebaseapp.com/login"
           target="_blank"
           className="btn"
+          rel="noopener noreferrer"
         >
           <h2>check it out</h2>
         </a>
