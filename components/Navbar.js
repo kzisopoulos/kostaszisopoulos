@@ -11,7 +11,7 @@ const MobileNav = ({ open, setOpen }) => {
             className="hover-underline-animation"
             onClick={() => setOpen(!open)}
           >
-            Home
+            <h3>home</h3>
           </a>
         </Link>
         <Link href="/projects">
@@ -19,7 +19,7 @@ const MobileNav = ({ open, setOpen }) => {
             className="hover-underline-animation"
             onClick={() => setOpen(!open)}
           >
-            projects
+            <h3>projects</h3>
           </a>
         </Link>
         <Link href="/contact">
@@ -27,7 +27,7 @@ const MobileNav = ({ open, setOpen }) => {
             className="hover-underline-animation"
             onClick={() => setOpen(!open)}
           >
-            Contact
+            <h3>Contact</h3>
           </a>
         </Link>
       </ul>
@@ -50,13 +50,19 @@ const Navbar = () => {
       </Link>
       <div className="navbar__links">
         <Link href="/">
-          <a className="hover-underline-animation">Home</a>
+          <a className="hover-underline-animation">
+            <h3>Home</h3>
+          </a>
         </Link>
         <Link href="/projects">
-          <a className="hover-underline-animation">Projects</a>
+          <a className="hover-underline-animation">
+            <h3>Projects</h3>
+          </a>
         </Link>
         <Link href="/contact">
-          <a className="hover-underline-animation">Contact</a>
+          <a className="hover-underline-animation">
+            <h3>Contact</h3>
+          </a>
         </Link>
       </div>
       {open && <MobileNav open={open} setOpen={setOpen} />}
