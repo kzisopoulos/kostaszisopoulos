@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
 const collaborate = () => {
   return (
     <div className="page__container">
@@ -25,7 +25,7 @@ const collaborate = () => {
           <div className="card__title">
             <h2>features</h2>
           </div>
-          <ul className="stack__list">
+          <ul className="card__content">
             <li>
               <h2>Categories</h2>
             </li>
@@ -51,7 +51,7 @@ const collaborate = () => {
           <div className="card__title hue">
             <h2>TECH</h2>
           </div>
-          <ul className="stack__list">
+          <ul className="card__content">
             <li>
               <h2>REACT</h2>
             </li>
