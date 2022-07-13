@@ -48,10 +48,10 @@ export default function Home() {
               <h2>HTML / CSS / Javascript</h2>
             </li>
             <li>
-              <h2>Node.js / express.js</h2>
+              <h2>Node.js / Express.js</h2>
             </li>
             <li>
-              <h2>React / Next.js</h2>
+              <h2>React.js / Next.js</h2>
             </li>
             <li>
               <h2>SASS / BEM</h2>
@@ -68,10 +68,10 @@ export default function Home() {
           </div>
           <ul className="stack__list">
             <li>
-              <h2>networking</h2>
+              <h2>Network Maintenance</h2>
             </li>
             <li>
-              <h2>server maintenance</h2>
+              <h2>Server maintenance</h2>
             </li>
             <li>
               <h2>troubleshooting</h2>
@@ -80,7 +80,7 @@ export default function Home() {
               <h2>Active Directory</h2>
             </li>
             <li>
-              <h2>iot</h2>
+              <h2>systems monitoring</h2>
             </li>
           </ul>
         </div>

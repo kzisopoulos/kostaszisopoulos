@@ -53,7 +53,7 @@ const collaborate = () => {
           </div>
           <ul className="stack__list">
             <li>
-              <h2>REACT</h2>
+              <h2>REACT.js</h2>
             </li>
             <li>
               <h2>CRUD operations</h2>
