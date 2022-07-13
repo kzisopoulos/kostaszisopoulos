@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -43,7 +43,7 @@ export default function Home() {
           <div className="card__title">
             <h2>web stack</h2>
           </div>
-          <ul className="stack__list">
+          <ul className="card__content">
             <li>
               <h2>HTML / CSS / Javascript</h2>
             </li>
@@ -66,7 +66,7 @@ export default function Home() {
           <div className="card__title hue">
             <h2>IT stack</h2>
           </div>
-          <ul className="stack__list">
+          <ul className="card__content">
             <li>
               <h2>Network Maintenance</h2>
             </li>
